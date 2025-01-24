@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
 import Home from "./pages/Home";
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <MovieProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -52,7 +52,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </MovieProvider>
   );
 }

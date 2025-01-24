@@ -1,5 +1,5 @@
 import backgroundImage from "/src/assets/images/background.png";
-import MovieCard from "./MovieUpcomingCard";
+import MovieCard from "./MoviesUpcomingCard";
 import { useEffect, useState } from "react";
 import { movieService } from "../../services/api";
 

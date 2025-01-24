@@ -30,7 +30,7 @@ const HomeMovieInfo = ({ movie }) => {
 
   return (
     <div className="text-white rounded-xl px-10">
-      <h1 className="text-2xl xl:text-5xl font-bold font-kameron uppercase truncate">{movie?.title || "Unknown Title"}</h1>
+      <h1 className="text-1xl sm:text-2xl md:text-3xl xl:text-4xl font-bold font-kameron uppercase truncate">{movie?.title || "Unknown Title"}</h1>
       <div className="flex items-center text-sm font-semibold uppercase mb-2">
         {movie?.vote_average ? (
           <>
