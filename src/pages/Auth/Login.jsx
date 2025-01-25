@@ -55,7 +55,7 @@ const Login = () => {
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
 
   return (
-    <section className="bg-cover bg-center relative" style={backgroundStyle}>
+    <section className="bg-cover bg-center relative pt-4" style={backgroundStyle}>
       <div className="container mx-auto w-full pt-10 text-white">
         <div className="flex flex-col justify-center font-[sans-serif] sm:h-screen p-4">
           <div className="max-w-md w-full mx-auto border rounded-2xl p-8 bg-transparent">

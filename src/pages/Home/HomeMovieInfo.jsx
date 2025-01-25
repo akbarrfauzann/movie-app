@@ -45,7 +45,9 @@ const HomeMovieInfo = ({ movie }) => {
         <span className="mx-2">|</span>
         <span>{movie?.runtime ? `${movie.runtime} min` : "Runtime not available"}</span>
       </div>
-      <p style={{ maxWidth: "600px" }}>{movie?.overview || "No description available for this movie"}</p>
+      <p className="text-sm sm:line-clamp-none line-clamp-2" style={{ maxWidth: "500px" }}>
+        {movie?.overview || "No description available for this movie"}
+      </p>
       <div className="flex space-x-4 mt-4 font-semibold font-roboto">
         <button onClick={handleWatchClick} className="bg-red-600 text-white px-4 py-3 text-sm rounded-full flex items-center" aria-label="Watch Trailer">
           <FaPlay className="mr-2 w-4 h-4" />

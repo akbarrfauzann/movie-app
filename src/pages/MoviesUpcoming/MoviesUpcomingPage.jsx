@@ -28,7 +28,7 @@ const MoviesUpcoming = () => {
   return (
     <section id="popular-movies" className="bg-cover bg-center relative" style={backgroundStyle}>
       <div className="container mx-auto w-full px-10 pt-10 pb-10" data-aos="fade-up">
-        <h1 className="text-4xl font-semibold font-kameron uppercase text-white mb-10">Upcoming Movies</h1>
+        <h1 className="text-2xl md:text-4xl font-semibold font-kameron uppercase text-white mb-10">Upcoming Movies</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {isLoading ? <p className="text-white">Loading upcoming movies...</p> : popularMoviesData?.map((movie) => <MovieCard key={movie.id} movie={movie} />)}

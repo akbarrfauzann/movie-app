@@ -64,7 +64,7 @@ const Movies = () => {
       }}
     >
       <div className="container mx-auto w-full px-4 sm:px-8 pt-8 sm:pt-10" data-aos="fade-up">
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-8 sm:mb-10 space-y-4 sm:space-y-0">
+        <div className="flex flex-row justify-between items-baseline mb-8 sm:mb-10 space-y-4 sm:space-y-0">
           <h1 className="text-2xl md:text-4xl font-semibold font-kameron uppercase text-white">Movies</h1>
           <div className="relative">
             <button
@@ -90,7 +90,7 @@ const Movies = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8 pb-8">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8 pb-8">
           {filteredMovies?.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}

@@ -71,7 +71,9 @@ const Navbar = () => {
   return (
     <nav ref={navRef} className="fixed top-0 left-0 w-full bg-transparent z-50" role="navigation">
       <div className="container mx-auto px-10 py-2 justify-between text-white flex items-center">
-        <img src={logo} alt="logo" width={50} height={50} />
+        <Link to="/" className="flex items-center space-x-2">
+          <img src={logo} alt="logo" width={50} height={50} />
+        </Link>
 
         <ul className="hidden space-x-10 uppercase font-bold xl:flex">
           <li>
