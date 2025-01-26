@@ -79,7 +79,7 @@ const MovieDetails = () => {
       <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-4">
         <p className="text-xl mb-4 text-center">{state.error}</p>
         <div className="flex gap-4">
-          <button onClick={fetchMovieData} className="px-6 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500" type="button" aria-label="Try again">
+          <button onClick={fetchMovieData} className="px-6 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition-colors focus:outline-none focus:ring-2 focus:ring-red-600" type="button" aria-label="Try again">
             Try Again
           </button>
           <button onClick={() => navigate("/")} className="px-6 py-2 bg-gray-600 rounded-lg hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500">

@@ -1,8 +1,9 @@
 import { FaStar, FaPlus, FaMinus } from "react-icons/fa";
 import { useMovie } from "../../hooks/useMovie";
-
+import { ToastContainer, toast } from "react-toastify";
 const MovieInfo = ({ movie }) => {
   const { addToList, removeFromList, isInList, isAuthenticated } = useMovie();
+
   const handleListClick = () => {
     if (!isAuthenticated()) {
       alert("Please login to add movies to My List");
@@ -12,10 +13,10 @@ const MovieInfo = ({ movie }) => {
     if (movie) {
       if (isInList(movie.id)) {
         removeFromList(movie.id);
-        alert("Movie removed from My List");
+        toast.error("Movie removed from My List");
       } else {
         addToList(movie);
-        alert("Movie added to My List");
+        toast.success("Movie added to My List");
       }
     }
   };
@@ -54,6 +55,8 @@ const MovieInfo = ({ movie }) => {
         <span>{movie.genres?.map((genre) => genre.name).join(", ")}</span>
       </div>
       <p className="text-gray-200 max-w-4xl">{movie.overview}</p>
+
+      <ToastContainer position="bottom-right" />
     </div>
   );
 };

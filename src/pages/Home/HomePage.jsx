@@ -38,7 +38,7 @@ const HomePage = () => {
     if (carouselMovies.length === 0) return;
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex === carouselMovies.length - 1 ? 0 : prevIndex + 1));
-    }, 5000);
+    }, 8000);
     return () => clearInterval(interval);
   }, [carouselMovies]);
   /// CAROUSEL NAVIGATION ///

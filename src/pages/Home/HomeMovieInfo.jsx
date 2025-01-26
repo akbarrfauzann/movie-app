@@ -1,6 +1,7 @@
 import { FaPlay, FaPlus, FaMinus, FaStar } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useMovie } from "../../hooks/useMovie";
+import { ToastContainer, toast } from "react-toastify";
 
 const HomeMovieInfo = ({ movie }) => {
   const navigate = useNavigate();
@@ -18,10 +19,10 @@ const HomeMovieInfo = ({ movie }) => {
     if (movie) {
       if (isInList(movie.id)) {
         removeFromList(movie.id);
-        alert("Movie removed from My List");
+        toast.error("Movie removed from My List");
       } else {
         addToList(movie);
-        alert("Movie added to My List");
+        toast.success("Movie added to My List");
       }
     }
   };
@@ -71,6 +72,7 @@ const HomeMovieInfo = ({ movie }) => {
           )}
         </button>
       </div>
+      <ToastContainer position="bottom-right" />
     </div>
   );
 };

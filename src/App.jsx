@@ -1,5 +1,6 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
+import { MovieProvider } from "./context/MovieContext";
 import "./App.css";
 import Home from "./pages/Home";
 import Header from "./Layouts/Header";
@@ -8,10 +9,10 @@ import MoviesList from "./pages/MoviesList/MoviesListPage";
 import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
 import Footer from "./Layouts/Footer";
+import ScrollUp from "./Components/ScrollUp";
 import AuthRoute from "./AuthRoute";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { MovieProvider } from "./context/MovieContext";
 
 function App() {
   useEffect(() => {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
+        <ScrollUp />
       </HashRouter>
     </MovieProvider>
   );

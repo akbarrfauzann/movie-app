@@ -1,42 +1,53 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.scroll_up {
+  position: fixed;
+  right: 2.2rem;
+  bottom: -20%;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.4rem;
+  z-index: 10;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.scroll_up-icon {
+  font-size: 1rem;
+  color: #fff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.scroll_up:hover {
+  background-color: #000000;
+}
+
+.show-scroll {
+  bottom: 3rem;
+}
+
+@media screen and (max-width: 992px) {
+  .scroll_up {
+    right: 1.5rem;
+    padding: 0.25rem 0.4rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .scroll_up-icon {
+    font-size: 1.25rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media screen and (max-width: 768px) {
+  .show-scroll {
+    bottom: 4rem;
   }
 }
 
-.card {
-  padding: 2em;
-}
+@media screen and (max-width: 350px) {
+  .scroll_up {
+    right: 1rem;
+  }
 
-.read-the-docs {
-  color: #888;
-} */
+  .scroll_up-icon {
+    font-size: 1rem;
+  }
+}
